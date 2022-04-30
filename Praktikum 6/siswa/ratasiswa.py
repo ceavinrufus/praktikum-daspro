@@ -4,7 +4,7 @@
 import tulisdata
 
 # KAMUS
-# namafile, induk, nilai, current_categ : string
+# namafile, idPemilik, nilai, current_categ : string
 # temp : array
 # i, total, count : integer
 # siswa : array of dataSiswa
@@ -28,10 +28,10 @@ f = open(namafile, 'r')
 siswa = []
 
 induk = f.readline()
-if induk == "99999999":     # Jika data nomor induk mengandung mark
+if induk == "99999999":     # Jika data nomor idPemilik mengandung mark
     print("File kosong")
 else:
-    while induk != "99999999":      # Looping selagi data nomor induk bukan mark
+    while induk != "99999999":      # Looping selagi data nomor idPemilik bukan mark
         kodekursus = f.readline()
         nilai = f.readline()
         siswa += [(int(induk), str(kodekursus), int(nilai))]      # Menyimpan nilai dalam array of tuple
